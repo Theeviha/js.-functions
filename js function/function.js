@@ -190,6 +190,46 @@ function getCurrentDate() {
 }
 
 // Remove Duplicates from Array:30
+// Remove Duplicates from Array:30
+function removeDuplicates(arr) {
+    return [...new Set(arr)];
+}
+
+//  RegExp:31
+let regexp = new RegExp("\d\.\d");
+
+alert( "Chapter 5.1".match(regexp) ); // null
+
+// let regStr:32
+let regStr = "\\d\\.\\d";
+alert(regStr); // \d\.\d (correct now)
+
+let regexp = new RegExp(regStr);
+
+alert( "Chapter 5.1".match(regexp) ); // 5.1
+
+// Binary data, files:33
+let buffer = new ArrayBuffer(16); // create a buffer of length 16
+alert(buffer.byteLength); // 16
+
+// *
+let buffer = new ArrayBuffer(16); // create a buffer of length 16
+
+let view = new Uint32Array(buffer); // treat buffer as a sequence of 32-bit integers
+
+alert(Uint32Array.BYTES_PER_ELEMENT); // 4 bytes per integer
+
+alert(view.length); // 4, it stores that many integers
+alert(view.byteLength); // 16, the size in bytes
+
+// let's write a value
+view[0] = 123456;
+
+// iterate over values
+for(let num of view) {
+  alert(num); // 123456, then 0, 0, 0 (4 values total)
+}
+
 function removeDuplicates(arr) {
     return [...new Set(arr)];
 }
