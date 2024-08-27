@@ -3,25 +3,35 @@
     return a + b;
 }
 
+
+
 // Subtraction Function:2
 function subtract(a, b) {
     return a - b;
 }
+
+
 
 // Multiplication Function:3
 function multiply(a, b) {
     return a * b;
 }
 
+
+
 //Division Function:4
 function divide(a, b) {
     return a / b;
 }
 
+
+
 //Check Even or Odd:5
 function isEven(number) {
     return number % 2 === 0;
 }
+
+
 
 // Factorial Function:6
 function factorial(n) {
@@ -29,20 +39,28 @@ function factorial(n) {
     return n * factorial(n - 1);
 }
 
+
+
 // Find Minimum:7
 function findMin(a, b, c) {
     return Math.min(a, b, c);
 }
+
+
 
 // Convert Fahrenheit to Celsius:8
 function fahrenheitToCelsius(fahrenheit) {
     return (fahrenheit - 32) * 5/9;
 }
 
+
+
 // Reverse a String:9
 function reverseString(str) {
     return str.split('').reverse().join('');
 }
+
+
 
 // Find Length of a String:10
 function stringLength(str) {
@@ -55,10 +73,12 @@ function sumArray(arr) {
     return arr.reduce((sum, current) => sum + current, 0);
 }
 
+
 // Convert to Uppercase:12
 function toUpperCase(str) {
     return str.toUpperCase();
 }
+
 
 // Check if String Contains Substring:13
 function containsSubstring(str, substring) {
@@ -84,20 +104,26 @@ function hasKey(obj, key) {
     return obj.hasOwnProperty(key);
 }
 
+
 // Get Object Values:17
 function getObjectValues(obj) {
     return Object.values(obj);
 }
+
 
 // export function18
 export function sayHi(user) {
     alert(`Hello, ${user}!`);
   }  // no ; at the end
 
+
+
 //  export default function:19
 export default function(user) { // no function name
     alert(`Hello, ${user}!`);
   }
+
+
 
 //   Array forEach:20
 const numbers = [45, 4, 9, 16, 25];
@@ -110,10 +136,14 @@ function myFunction(value, index, array) {
   txt += value + "<br>"; 
 }
 
+
+
 //  if, else, and else if:21
 if (new Date().getHours() < 18) {
     document.getElementById("demo").innerHTML = "Good day!";
   }
+
+
 
 //   Switch Statement:22
 let day;
@@ -141,6 +171,8 @@ switch (new Date().getDay()) {
 }
 document.getElementById("demo").innerHTML = "Today is " + day;
 
+
+
 // Loops:23
 let text = "";
 
@@ -149,6 +181,8 @@ for (let i = 0; i < 5; i++) {
 }
 
 document.getElementById("demo").innerHTML = text;
+
+
 
 // While Loop:24
 let text = "";
@@ -174,6 +208,8 @@ function deleteKey(obj, key) {
 }
 
 
+
+
 // Check if Key Exists in Object:27
 function hasKey(obj, key) {
     return obj.hasOwnProperty(key);
@@ -184,16 +220,22 @@ function getCurrentMonth() {
     return new Date().getMonth() + 1;
 }
 
+
+
 // Get Current Date:29
 function getCurrentDate() {
     return new Date();
 }
+
+
 
 // Remove Duplicates from Array:30
 // Remove Duplicates from Array:30
 function removeDuplicates(arr) {
     return [...new Set(arr)];
 }
+
+
 
 //  RegExp:31
 let regexp = new RegExp("\d\.\d");
@@ -207,6 +249,8 @@ alert(regStr); // \d\.\d (correct now)
 let regexp = new RegExp(regStr);
 
 alert( "Chapter 5.1".match(regexp) ); // 5.1
+
+
 
 // Binary data, files:33
 let buffer = new ArrayBuffer(16); // create a buffer of length 16
@@ -413,38 +457,11 @@ numbers.sort();
 console.log(numbers); // [1, 2, 3]
 
 
-
-
-
-<!-- splice()
-Description: Changes the contents of an array by removing or replacing existing elements and/or adding new elements in place -->
-let numbers = [1, 2, 3, 4];
-let removed = numbers.splice(1, 2);
-console.log(removed); // [2, 3]
-console.log(numbers); // [1, 4]
-
-
-
-
-
-<!-- splice()
-Description: Changes the contents of an array by removing or replacing existing elements and/or adding new elements in place -->
-let numbers = [1, 2, 3, 4];
-let sliced = numbers.slice(1, 3);
-console.log(sliced); // [2, 3]
-
-
-
-
 <!-- includes()
 Description: Determines whether an array includes a certain value among its entries -->
 let numbers = [1, 2, 3];
 let hasTwo = numbers.includes(2);
 console.log(hasTwo); // true
-
-
-
-
 
 <!-- findIndex()
 Description: Returns the index of the first element in the array that satisfies the provided testing function. -->
