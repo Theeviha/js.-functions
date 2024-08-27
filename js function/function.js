@@ -234,4 +234,317 @@ function removeDuplicates(arr) {
     return [...new Set(arr)];
 }
 
+                                arujan
+result = a || b;
+<!-- In classical programming, the logical OR is meant to manipulate boolean values only. If any of its arguments are true, it returns true, otherwise it returns false. -->
+alert( true || true );   // true
+alert( false || true );  // true
+alert( true || false );  // true
+alert( false || false ); // false
+<!-- As we can see, the result is always true except for the case when both operands are false. -->
+
+
+
+
+
+
+<!-- In JavaScript, the && operator is the logical AND operator. It evaluates expressions from left to right and returns the first falsy value it encounters. If all values are truthy, it returns the last value. -->
+result = value1 && value2 && value3;
+
+
+
+
+
+
+<!-- Evaluates operands from left to right.
+For each operand, converts it to a boolean. If the result is false, stops and returns the original value of that operand.
+If all operands have been evaluated (i.e. all were truthy), returns the last operand. -->
+alert( 1 && 2 && null && 3 ); // null
+
+
+
+
+
+
+<!-- The “do…while” loop; -->
+while (condition) {
+    // code
+    // so-called "loop body"
+  }
+  <!-- While the condition is truthy, the code from the loop body is executed. -->
+  do {
+    // loop body
+  } while (condition);
+  <!-- The loop will first execute the body, then check the condition, and, while it’s truthy, execute it again and again. -->
+
+
+
+
+  <!-- Continue to the next iteration -->
+  let sum = 0;
+
+while (true) {
+
+  let value = +prompt("Enter a number", '');
+
+  if (!value) break; // (*)
+
+  sum += value;
+
+}
+alert( 'Sum: ' + sum );
+
+
+
+
+
+
+alert('Hello'); alert('World');
+<!-- here we split “Hello World” into two alerts -->
+
+
+
+
+
+<!-- The "switch" statement -->
+<!-- The switch has one or more case blocks and an optional default.
+It looks like this: -->
+switch(x) {
+    case 'value1':  // if (x === 'value1')
+      ...
+      [break]
+  
+    case 'value2':  // if (x === 'value2')
+      ...
+      [break]
+  
+    default:
+      ...
+      [break]
+  }
+  <!-- The value of x is checked for a strict equality to the value from the first case (that is, value1) then to the second (value2) and so on.
+If the equality is found, switch starts to execute the code starting from the corresponding case, until the nearest break (or until the end of switch).
+If no case is matched then the default code is executed (if it exists). -->
+
+
+
+
+
+
+<!-- alert -->
+alert("Hello");
+<!-- The mini-window with the message is called a modal window. The word “modal” means that the visitor can’t interact with the rest of the page, press other buttons, etc, until they have dealt with the window. In this case – until they press “OK”. -->
+
+
+
+
+
+
+<!-- Function expressions -->
+function sayHi() {
+    alert( "Hello" );
+  }
+  <!-- There is another syntax for creating a function that is called a Function Expression.
+  It allows us to create a new function in the middle of any expression. -->
+
+
+
+
+
+
+  <!-- Comments -->
+  <!-- This code will do this thing (...) and that thing (...)
+...and who knows what else... -->
+// Calculate the total price of items in a cart
+
+let totalPrice = 0; // Initialize totalPrice to 0
+
+for (let item of items) { // Loop through each item in the cart
+    totalPrice += item.price; // Add the item's price to the totalPrice
+}
+
+console.log("Total Price: " + totalPrice);
+<!-- But in good code, the amount of such “explanatory” comments should be minimal. Seriously, the code should be easy to understand without them.
+There’s a great rule about that: “if the code is so unclear that it requires a comment, then maybe it should be rewritten instead”. -->
+
+
+
+
+
+<!-- Development of “pow”: the spec -->
+describe("pow", function() {
+
+    it("raises to n-th power", function() {
+      assert.equal(pow(2, 3), 8);
+    });
+  
+  });
+  <!-- Let’s say we want to make a function pow(x, n) that raises x to an integer power n. We assume that n≥0.
+That task is just an example: there’s the ** operator in JavaScript that can do that, but here we concentrate on the development flow that can be applied to more complex tasks as well.
+Before creating the code of pow, we can imagine what the function should do and describe it.
+Such description is called a specification or, in short, a spec, and contains descriptions of use cases together with tests for them, like this: -->
+
+
+
+
+<!-- join()
+Description: Joins all elements of an array into a string.
+Example: ["Hello", "world"].join(" "); // returns "Hello world" -->
+let words = ["Hello", "world"];
+let sentence = words.join(" ");
+console.log(sentence); // "Hello world"
+
+
+
+
+<!-- reverse()
+Description: Reverses the order of the elements in an array in place. -->
+let numbers = [1, 2, 3];
+numbers.reverse();
+console.log(numbers); // [3, 2, 1]
+
+
+
+
+<!-- sort()
+Description: Sorts the elements of an array in place and returns the array. -->
+let numbers = [3, 1, 2];
+numbers.sort();
+console.log(numbers); // [1, 2, 3]
+
+
+
+
+
+<!-- splice()
+Description: Changes the contents of an array by removing or replacing existing elements and/or adding new elements in place -->
+let numbers = [1, 2, 3, 4];
+let removed = numbers.splice(1, 2);
+console.log(removed); // [2, 3]
+console.log(numbers); // [1, 4]
+
+
+
+
+
+<!-- splice()
+Description: Changes the contents of an array by removing or replacing existing elements and/or adding new elements in place -->
+let numbers = [1, 2, 3, 4];
+let sliced = numbers.slice(1, 3);
+console.log(sliced); // [2, 3]
+
+
+
+
+<!-- includes()
+Description: Determines whether an array includes a certain value among its entries -->
+let numbers = [1, 2, 3];
+let hasTwo = numbers.includes(2);
+console.log(hasTwo); // true
+
+
+
+
+
+<!-- findIndex()
+Description: Returns the index of the first element in the array that satisfies the provided testing function. -->
+let numbers = [1, 2, 3];
+let index = numbers.findIndex(x => x > 1);
+console.log(index); // 1
+
+
+
+
+
+<!-- find()
+Description: Returns the value of the first element in the array that satisfies the provided testing function. -->
+let numbers = [1, 2, 3];
+let found = numbers.find(x => x > 1);
+console.log(found); // 2
+
+
+
+
+
+<!-- every()
+Description: Tests whether all elements in the array pass the test implemented by the provided function -->
+let numbers = [1, 2, 3];
+let allPositive = numbers.every(x => x > 0);
+console.log(allPositive); // true
+
+
+
+
+<!-- some()
+Description: Tests whether at least one element in the array passes the test implemented by the provided function. -->
+let numbers = [1, 2, 3];
+let hasGreaterThanTwo = numbers.some(x => x > 2);
+console.log(hasGreaterThanTwo); // true
+
+
+
+
+
+
+<!-- forEach()
+Description: Executes a provided function once for each array element. -->
+let numbers = [1, 2, 3];
+numbers.forEach(x => console.log(x));
+// 1
+// 2
+// 3
+
+
+
+
+
+<!-- reduce()
+Description: Executes a reducer function on each element of the array, resulting in a single output value -->
+let numbers = [1, 2, 3, 4];
+let sum = numbers.reduce((acc, curr) => acc + curr, 0);
+console.log(sum); // 10
+
+
+
+
+
+
+<!-- filter()
+Description: Creates a new array with all elements that pass the test implemented by the provided function -->
+let numbers = [1, 2, 3, 4];
+let evens = numbers.filter(x => x % 2 === 0);
+console.log(evens); // [2, 4]
+
+
+
+
+
+
+<!-- map()
+Description: Creates a new array populated with the results of calling a provided function on every element in the calling array -->
+let numbers = [1, 2, 3];
+let doubled = numbers.map(x => x * 2);
+console.log(doubled); // [2, 4, 6]
+
+
+
+
+
+
+<!-- JSON.parse()
+Description: Parses a JSON string, constructing the JavaScript value or object described by the string. -->
+let jsonString = '{"name":"Alice","age":25}';
+let obj = JSON.parse(jsonString);
+console.log(obj.name); // "Alice"
+
+
+
+
+
+
+<!-- JSON.stringify()
+Description: Converts a JavaScript object or value to a JSON string. -->
+let obj = { name: "Alice", age: 25 };
+let jsonString = JSON.stringify(obj);
+console.log(jsonString); // '{"name":"Alice","age":25}'
 
